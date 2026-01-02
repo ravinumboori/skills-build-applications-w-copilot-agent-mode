@@ -5,20 +5,22 @@ import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
+import OctofitLogo from './components/OctofitLogo';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Octofit Tracker</h1>
-        <nav>
-          <ul>
-            <li><Link to="/activities">Activities</Link></li>
-            <li><Link to="/leaderboard">Leaderboard</Link></li>
-            <li><Link to="/teams">Teams</Link></li>
-            <li><Link to="/users">Users</Link></li>
-            <li><Link to="/workouts">Workouts</Link></li>
-          </ul>
+        <header className="App-header">
+          <OctofitLogo />
+          <h1 style={{ margin: 0 }}>Octofit Tracker</h1>
+        </header>
+        <nav className="nav">
+          <Link className="App-link" to="/activities">Activities</Link>
+          <Link className="App-link" to="/leaderboard">Leaderboard</Link>
+          <Link className="App-link" to="/teams">Teams</Link>
+          <Link className="App-link" to="/users">Users</Link>
+          <Link className="App-link" to="/workouts">Workouts</Link>
         </nav>
         <Routes>
           <Route path="/activities" element={<Activities />} />
